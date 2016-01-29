@@ -1,0 +1,26 @@
+1. Preprocessing
+
+-Limit points to only exterior ones
+-Divide points into grid, should be based on diameter of circle
+
+2. Bounding Algorithm
+
+Algorithm 1
+
+-Find bounding box
+-Start circle at top corner
+-Move circle down 1 pixel (or leave some adjustable granularity)
+-Upon collision:
+	-Move back 1 pixel
+	-Draw circle
+	-Change direction slightly
+
+Algorithm 2
+
+-For each point:
+	-Find nearest 2 points (one in each direction, perhaps)
+	-Attempt to draw circle at point perpendicular to the average of those three points, with distance equal to its radius
+	
+3. Postprocessing:
+
+-Remove overlapping parts of each circles
