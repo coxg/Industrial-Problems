@@ -1,0 +1,29 @@
+STEP 4
+Identify the curvature of each point 
+Start at one point - find its two neighboring points 
+-skip the middle point 
+Create an axis that lies on the two other points
+Create a parabola that involves the two points 
+	f(x)=ax^2+bx+c
+	let the axis created be the "new x axis" --> y coordinates now zero, keeping x value
+	let the two points on the axis be (p1,0) and (p2,0)
+	Set f(p1)=f(p2)=0 
+	Solve for a specific c, b and a that give a solution to f(x).
+This becomes the parabola that describes the curves between each point 
+Create a circle estimated by the parabola to determine if there are points outside that need to
+be deleted. 
+The circle is best approximated near the vertex V of the parabola 
+	If the radius r of the circle is an input given by the user, then the center of the circle
+	will be located at the midpoint of the two points on the new x axis and at a y=r 
+	(assuming that we are still calling y 0)
+		c = ((p1+p2)/2,r)
+	If the radius is not given by the user make it 1 
+STEP 5
+Delete points as necessary 
+If points inbetween are on the perimeter of the circle, then keep
+If a point(s) are outside the perimeter of the circle then delete them
+
+STEP 6
+Fill in the gaps
+Where x points are deleted, insert x points on the perimeter of the circle between the last point
+kept and the next point kept 
