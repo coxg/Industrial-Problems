@@ -1,0 +1,39 @@
+Take in collection of points 
+user inputs how fit they want the shape. 
+	- call it a circle for now 
+	- estimate a parabola using the circle 
+		--let the diameter of the circle be an x axis 
+			--- two points on the axis being x1 and x2
+			--- f(x)=ax^2+bx+c is the equation used to fit the parabola 
+			--- set f(x1)=f(x2)=0 to solve for a b and c and f(x) 
+	- the smaller the circle the more fit the shape will be
+POLYGON:
+Start at p1. Find its next bordering point. 
+Between these two points fit the parabola.
+keep doing this between each point. 
+Make sure the parabola is pointing inward to the shape: test an interior point and see if it
+is inside of the bound made by the parabola
+
+LINES: 
+Take in the collection of lines, and find their intersections and end points 
+The intercetion and end points will be the bordering points
+once in order, start at point 1 and find the next bordering point 
+Between these two points fit the parabola.
+keep doing this between each point. 
+Make sure the parabola is pointing inward to the shape: test an interior point and see if it
+is inside of the bound made by the parabola
+
+POINTS:
+Create edges and lines around and between points
+Eliminate the interior lines and keep the points 
+Combine lines that are 180 deg of eachother to make one big line
+at all other angles the vertex will become a point-- these points will become the border points
+Starting at one point, and its neighboring point fit the desired parabola
+keep doing this between each point. 
+Make sure the parabola is pointing inward to the shape: test an interior point and see if it
+is inside of the bound made by the parabola
+
+MIXED:
+Figure out if the collection is made up of mostly lines, points or is a polygon
+look for any stray points to be included in the shape
+follow the steps for whatever the majority is
